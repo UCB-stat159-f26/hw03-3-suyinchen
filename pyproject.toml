@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools >= 77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tennis_career"
+authors = [
+  { name = "Monica Chen" },
+]
+description = "A Python package to get and plot the career matches of tennis players"
+readme = "README.md"
+
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "matplotlib",
+]
+
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+keywords = ["tennis", "tennisabstract", "visualization"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/UCB-stat159-f26/hw03-3-suyinchen"
+
+[tool.setuptools]
+packages = ["tennis_career"]
+
+[tool.setuptools.dynamic]
+version = {attr = "tennis_career.__version__"}
