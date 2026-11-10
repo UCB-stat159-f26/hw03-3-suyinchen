@@ -63,7 +63,7 @@ def _parse_matches(career_js):
     Input: text of the player's career JS file.
     Output: list of matches.
     """
-    found = re.search(r"var morematchmx = (\[\[.*?\]\])", career_js, re.DOTALL)
+    found = re.search(r"var morematchmx\s*=\s*(\[\s*\[.*?\]\s*\])", career_js, re.DOTALL)
     return json.loads(found.group(1))
 
 
