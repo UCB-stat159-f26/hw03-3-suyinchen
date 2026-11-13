@@ -1,0 +1,33 @@
+AI Documentation
+
+1. Tool: Claude
+Dates: November 8-13, 2026
+
+2. Scope
+I used Claude to help write and review the package code, tests and README for hw 3.
+
+3. Human Verification
+I reviewed, debugged and verified the AI-assisted code myself to make sure there's no fabricated or altered values. No synthetic data or unverified automated processing was used. I take full responsibility for the accuracy and integrity of the final work.
+
+4. Data Protection Notice
+I confirm that no protected health information (PHI/HIPAA), unpublished data, or trade secrets were exposed to non-approved external AI models.
+
+5. Prompts and output summary
+
+- Getting the player's date of birth
+Prompt: What should I do if the career JS file doesn't include the player's own date of birth?
+Output: Claude remind me that in hw1 I found a file from the website 
+that each player has another file (jsmatches/SerenaWilliams.js) with "var fullname" and "var dob". 
+I opened the file in the browser and confirmed that "var dob=19810926;" is there.
+
+- Reading the JS files with regular expressions
+Prompt: Help me fix the regular expressions to extract morematchmx, fullname, and dob from the JS files.
+Output: Claude helped me fix the regular expressions. When the code failed on the actual JS file, Claude helped me identify a formatting difference: the real file contained line breaks and extra whitespace that were not present in my mock data. It suggested using \s* and re.DOTALL to make the pattern handle whitespace and multi-line content.
+
+- Downloading with requests
+Output: Claude suggest me to add headers={"User-Agent": "Mozilla/5.0"} to the request,
+because it said the website may block requests that do not look like a browser.
+
+- Editing
+Prompt: Can you review my README and help me improve the formatting?
+Output: Claude reviewed my README and explained how to use backticks in Markdown to format file names and function names as inline code, making the documentation easier to read.
