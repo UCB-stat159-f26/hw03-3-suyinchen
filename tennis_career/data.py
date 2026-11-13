@@ -42,7 +42,7 @@ def _download_js(file_name):
     Output: text of the file, or None if the file does not exist.
     """
     url = f"https://www.tennisabstract.com/jsmatches/{file_name}.js"
-    response = requests.get(url)
+    response = requests.get(url, headers={"User-Agent": "Mozilla/5.0"})
     if response.status_code != 200:
         return None
     return response.text
